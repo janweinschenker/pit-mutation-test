@@ -1,5 +1,9 @@
+
+.idea/
+*.iml
 # Compiled class file
 *.class
+.coveralls.yml
 
 # Log file
 *.log
