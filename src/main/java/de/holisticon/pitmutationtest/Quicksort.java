@@ -17,7 +17,7 @@ public class Quicksort {
     int sameAsPivot = 0;
 
     for (int number : numbers) {
-      if (number > numbers.get(pivot))
+      if (number < numbers.get(pivot))
         greater.add(number);
       else if (number < numbers.get(pivot))
         lesser.add(number);
