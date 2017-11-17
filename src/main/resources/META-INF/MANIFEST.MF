@@ -1,0 +1,7 @@
+Manifest-Version: 1.0
+Main-Class: de.holisticon.pitmutationtest.App
+Implementation-Title: pitmutation-test
+Implementation-Version: 1.0.0-SNAPSHOT
+Implementation-Vendor-Id: de.holisticon
+Build-Jdk: 9.0.1
+Implementation-Vendor: Holisticon AG

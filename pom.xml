@@ -21,8 +21,9 @@
         <maven.javadoc.skip>true</maven.javadoc.skip>
         <allowSnapshots>true</allowSnapshots>
 
-        <spring-boot-starter.version>2.0.0.M6</spring-boot-starter.version>
-
+        <!-- Dependency versions-->
+        <junit.version>4.12</junit.version>
+        <spring-boot.version>2.0.0.M6</spring-boot.version>
 
         <!-- Plugin versions -->
         <coveralls-maven-plugin.version>3.1.0</coveralls-maven-plugin.version>
@@ -34,6 +35,7 @@
         <jgitflow-maven-plugin.version>1.0-m5.1</jgitflow-maven-plugin.version>
         <properties-maven-plugin.version>1.0.0</properties-maven-plugin.version>
         <pitest-maven.version>1.2.4</pitest-maven.version>
+
     </properties>
 
     <profiles>
@@ -96,6 +98,13 @@
             </resource>
         </resources>
         <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <mainClass>de.holisticon.pitmutationtest.App</mainClass>
+                </configuration>
+            </plugin>
             <plugin>
                 <groupId>org.pitest</groupId>
                 <artifactId>pitest-maven</artifactId>
@@ -265,11 +274,40 @@
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
-            <version>4.12</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
     </dependencies>
 
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>junit</groupId>
+                <artifactId>junit</artifactId>
+                <version>${junit.version}</version>
+                <scope>test</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter</artifactId>
+                <version>${spring-boot.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-test</artifactId>
+                <scope>test</scope>
+                <version>${spring-boot.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
     <repositories>
         <repository>
             <id>spring-snapshots</id>
