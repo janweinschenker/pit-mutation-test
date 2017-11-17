@@ -1,4 +1,4 @@
-package de.holisticon.pitmutationtest;
+package de.holisticon.pitmutationtest.subject;
 
 import java.util.ArrayList;
 import java.util.List;

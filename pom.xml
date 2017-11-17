@@ -80,7 +80,7 @@
     </profiles>
 
     <build>
-        <defaultGoal>clean install org.pitest:pitest-maven:mutationCoverage</defaultGoal>
+        <defaultGoal>org.pitest:pitest-maven:mutationCoverage</defaultGoal>
         <resources>
             <resource>
                 <directory>src/main/resources</directory>
@@ -109,14 +109,11 @@
                 <groupId>org.pitest</groupId>
                 <artifactId>pitest-maven</artifactId>
                 <configuration>
-                    <mutators>
-                        <mutator>CONDITIONALS_BOUNDARY</mutator>
-                    </mutators>
-                    <targetClasses>
-                        <param>de.holisticon.pitmutationtest.*</param>
-                    </targetClasses>
+                    <excludedClasses>
+                        <param>de.holisticon.pitmutationtest.App</param>
+                    </excludedClasses>
                     <targetTests>
-                        <param>de.holisticon.pitmutationtest.*</param>
+                        <param>de.holisticon.pitmutationtest.subject.*</param>
                     </targetTests>
                 </configuration>
             </plugin>

@@ -1,4 +1,4 @@
-package de.holisticon.pitmutationtest;
+package de.holisticon.pitmutationtest.subject;
 
 public class BoyerMooreHorspoolAlgorithm {
 

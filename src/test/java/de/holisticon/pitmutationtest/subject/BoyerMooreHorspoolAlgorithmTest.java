@@ -1,9 +1,11 @@
-package de.holisticon.pitmutationtest;
+package de.holisticon.pitmutationtest.subject;
 
 import static org.junit.Assert.assertEquals;
 
 import org.junit.Before;
 import org.junit.Test;
+
+import de.holisticon.pitmutationtest.subject.BoyerMooreHorspoolAlgorithm;
 
 public class BoyerMooreHorspoolAlgorithmTest {
 

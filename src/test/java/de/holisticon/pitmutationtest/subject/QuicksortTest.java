@@ -1,4 +1,4 @@
-package de.holisticon.pitmutationtest;
+package de.holisticon.pitmutationtest.subject;
 
 import static org.junit.Assert.assertEquals;
 
@@ -8,6 +8,8 @@ import java.util.stream.Stream;
 
 import org.junit.Before;
 import org.junit.Test;
+
+import de.holisticon.pitmutationtest.subject.Quicksort;
 
 public class QuicksortTest {
 
