@@ -1,7 +1,10 @@
 package de.holisticon.pitmutationtest;
 
+import static org.junit.Assert.assertNotNull;
+
 import org.junit.Before;
 import org.junit.Test;
+import org.springframework.boot.CommandLineRunner;
 
 import de.holisticon.pitmutationtest.App;
 
@@ -19,7 +22,9 @@ public class AppTest {
   @Test
   public void testApp() {
     app.toString();
-
     App.main(null);
+
+    CommandLineRunner run = app.run();
+    assertNotNull(run);
   }
 }
