@@ -80,7 +80,7 @@
     </profiles>
 
     <build>
-        <defaultGoal>org.pitest:pitest-maven:mutationCoverage</defaultGoal>
+        <defaultGoal>clean install org.pitest:pitest-maven:mutationCoverage</defaultGoal>
         <resources>
             <resource>
                 <directory>src/main/resources</directory>
